@@ -27,3 +27,16 @@ fun toRupiahFormat(baseSalary: Int) : String{
     val numberFormat = NumberFormat.getCurrencyInstance(localeID)
     return numberFormat.format(baseSalary).toString()
 }
+fun main() {
+    val employee = EmployeeD()
+    println("Rata-rata gaji ${employee.javaClass.simpleName} = ${toRupiahFormat(employee.baseSalary)}")
+
+    val programmer = Programmer()
+    println("Rata-rata gaji ${programmer.javaClass.simpleName} = ${toRupiahFormat(programmer.baseSalary)}")
+
+    val softwareEngineer = SoftwareEngineer()
+    println("Rata-rata gaji ${softwareEngineer.javaClass.simpleName} = ${toRupiahFormat(softwareEngineer.baseSalary)}")
+
+    val projectManager = ProjectManager()
+    println("Rata-rata gaji ${projectManager.javaClass.simpleName} = ${toRupiahFormat(projectManager.baseSalary)}")
+}
